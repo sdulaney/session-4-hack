@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>{{title}}</title>
 	<link rel="stylesheet" type="text/css" href="/css/style.css" />
 </head>
+
 <body>
-	{{content}}
+	{{#each songs}}
+	<p>{{this.title}}</p>
+	<audio controls>
+		<source type="audio/mpeg" src={{this.audioSrc}} preload="auto">
+	</audio>
+	{{/each}}
 	<script src="/js/script.js"></script>
 </body>
+
 </html>
