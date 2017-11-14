@@ -13,6 +13,7 @@ app.listen(3000, (request, response) => {
 
 app.get("/", (request, response) => {
 	response.render("home", {
+		title: "BruinPlay",
 		songs: currentSongs
 	})
 });
