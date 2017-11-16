@@ -15,3 +15,6 @@ app.get("/", (request, response) => {
 		content: "Hello, World!"
 	})
 });
+
+// TODO: Get music resources:
+// Example resources: https://raw.githubusercontent.com/acm-hackschool-f17/BruinPlayResources/master/resources.json
