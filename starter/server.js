@@ -5,6 +5,8 @@ var app = express();
 app.set('view engine', 'hbs');
 app.use(express.static('public'));
 
+var currentSongs = initialSongs();
+
 app.listen(3000, (request, response) => {
 	console.log("Server is listening on port 3000. Go to http://localhost:3000/");
 });
@@ -12,7 +14,7 @@ app.listen(3000, (request, response) => {
 app.get("/", (request, response) => {
 	response.render("home", {
 		title: "BruinPlay",
-		content: "Hello, World!"
+		songs: currentSongs
 	})
 });
 
